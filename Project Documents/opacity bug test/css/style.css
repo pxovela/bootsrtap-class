@@ -6,11 +6,12 @@ html {
 }
 /*-- Prevent Horizontal Scrolling & Font Style --*/
 html, body {
+   overflow-x: hidden;
    font-family: 'Lato', sans-serif;
    color: #505962;
 }
 .text-nuno {
-   color: #c49250;
+   color: #1EBBA3;
 }
 
 /*--- Nav Scrolling Offset --*/
@@ -19,28 +20,27 @@ html, body {
 
 
 /*============= NAVIGATION =============*/
-.navbar-brand img{
+.navbar-brand img {
    height: 2rem;
 }
 .navbar {
-   padding: 0.7rem 1rem;
+   padding: .7rem 1rem;
    text-transform: uppercase;
    font-weight: 700;
-   letter-spacing: 0.1rem;
+   letter-spacing: .1rem;
    font-size: .9rem;
    transition: background-color .5s ease;
 }
-
 .navbar-nav li {
-   padding-right: 0.8rem;
+   padding-right: .8rem;
 }
-.navbar-nav .nav-link{
+.navbar-nav .nav-link {
    color: white;
-   padding-top: 0.8rem;
+   padding-top: .8rem;
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-   color: #c49250;
+   color: #1EBBA3;
 }
 .custom-toggler-icon {
    color: white;
@@ -48,19 +48,21 @@ html, body {
 }
 .navbar.solid,
 .navbar.solid-toggle {
-   background: rgba(0, 0, 0, 0.7)!important;
-   transition: background-color .8s ease;
+   background: rgba(0, 0, 0, .7)!important;
+   transition: background-color 1s ease;
 }
 
 /*-- Remove Button Outline --*/
-button:focus, a:focus {
+button:focus, a:focus, a.btn:focus {
    outline: 0;
    -webkit-appearance: none;
    box-shadow: none;
+   transition: all .6s ease;
 }
 button, a, a.btn {
-   transition: all .4s ease;
+   transition: all .6s ease;
 }
+
 /*============= LANDING PAGE =============*/
 
 /*--- Fixed Landing Page Section --*/
@@ -91,6 +93,7 @@ button, a, a.btn {
    will-change: transform;
    display: table;
 }
+
 /*-- Landing Page Caption --*/
 .caption {
    z-index: 1;
@@ -99,7 +102,22 @@ button, a, a.btn {
    width: 100%;
    max-width: 100%;
 }
-/*-- Bouncing Down Arrow --*/
+.caption h1 {
+   font-size: 4.5rem;
+   letter-spacing: .3rem;
+   text-shadow: .1rem .1rem .8rem black;
+   padding-bottom: 1rem;
+}
+.caption h3 {
+   font-size: 2.5rem;
+   text-shadow: .1rem .1rem .5rem black;
+   padding-bottom: 2rem;
+}
+.caption .btn-lg {
+   border-width: medium;
+   padding: .8rem 1.5rem;
+   font-size: 1.1rem;
+}
 
 
 /*============= FEATURES SECTION =============*/

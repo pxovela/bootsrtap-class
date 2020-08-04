@@ -20,10 +20,11 @@ $('.navbar-toggler').click(function () { //when navbar-toggler is clicked
     }
 });
 
-/*========== CLOSE MOBILE MENU ON CLICK & SMOOTH SCROLL TO LINK ==========*/
+
+/*========== CLOSE MOBILE MENU ON CLICK & SMOOTH SCROLL TO LINK a[href^="#"] ==========*/
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
-    $('navbar-toggler').addClass('collapsed');
+    $('.navbar-toggler').addClass('collapsed');
     $('#navbarResponsive').removeClass('show');
 
     setTimeout(function () {
@@ -32,8 +33,8 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 800)
-})
+    }, 1000);
+});
 
 /*========== BOUNCING DOWN ARROW ==========*/
 
@@ -53,44 +54,42 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 /*========== TOP SCROLL BUTTON ==========*/
 
 
-/*========== MAKE ALL ANIMATION "FADEINUP" ON MOBILE 
-
-**Remember to use "animate__animated animate__fadeInUp" ==========*/
+/*========== MAKE ALL ANIMATION "FADEINUP" ON MOBILE ==========*/
 
 
 
 /*========== WAYPOINTS ANIMATION DELAY ==========*/
 //Original Resource: https://www.oxygenna.com/tutorials/scroll-animations-using-waypoints-js-animate-css
 $(function () { // a self calling function
-    function onScrollInit(items, trigger) { // a custom made function
-        items.each(function () { //for every element in items run function
-            var osElement = $(this), //set osElement to the current
-                osAnimationClass = osElement.attr('data-animation'), //get value of attribute data-animation type
-                osAnimationDelay = osElement.attr('data-delay'); //get value of attribute data-delay time
-  
-            osElement.css({ //change css of element
-                '-webkit-animation-delay': osAnimationDelay, //for safari browsers
-                '-moz-animation-delay': osAnimationDelay, //for mozilla browsers
-                'animation-delay': osAnimationDelay //normal
-            });
-  
-            var osTrigger = (trigger) ? trigger : osElement; //if trigger is present, set it to osTrigger. Else set osElement to osTrigger
-  
-            osTrigger.waypoint(function () { //scroll upwards and downwards
-                osElement.addClass('animated').addClass(osAnimationClass); //add animated and the data-animation class to the element.
-            }, {
-                    triggerOnce: true, //only once this animation should happen
-                    offset: '70%' // animation should happen when the element is 70% below from the top of the browser window
-                });
-        });
-    }
-  
-    onScrollInit($('.os-animation')); //function call with only items
-    onScrollInit($('.staggered-animation'), $('.staggered-animation-container')); //function call with items and trigger
-  });
-  
-  
-  /*========== CONTACT FORM INPUT VALIDATION ==========*/
+  function onScrollInit(items, trigger) { // a custom made function
+      items.each(function () { //for every element in items run function
+          var osElement = $(this), //set osElement to the current
+              osAnimationClass = osElement.attr('data-animation'), //get value of attribute data-animation type
+              osAnimationDelay = osElement.attr('data-delay'); //get value of attribute data-delay time
+
+          osElement.css({ //change css of element
+              '-webkit-animation-delay': osAnimationDelay, //for safari browsers
+              '-moz-animation-delay': osAnimationDelay, //for mozilla browsers
+              'animation-delay': osAnimationDelay //normal
+          });
+
+          var osTrigger = (trigger) ? trigger : osElement; //if trigger is present, set it to osTrigger. Else set osElement to osTrigger
+
+          osTrigger.waypoint(function () { //scroll upwards and downwards
+              osElement.addClass('animated').addClass(osAnimationClass); //add animated and the data-animation class to the element.
+          }, {
+                  triggerOnce: true, //only once this animation should happen
+                  offset: '70%' // animation should happen when the element is 70% below from the top of the browser window
+              });
+      });
+  }
+
+  onScrollInit($('.os-animation')); //function call with only items
+  onScrollInit($('.staggered-animation'), $('.staggered-animation-container')); //function call with items and trigger
+});
+
+
+/*========== CONTACT FORM INPUT VALIDATION ==========*/
 //Original Resource: https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form
 $(function () {
 
