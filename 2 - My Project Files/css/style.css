@@ -53,10 +53,11 @@ html, body {
 }
 
 /*-- Remove Button Outline --*/
-button:focus, a:focus {
+button:focus, a:focus, a.btn:focus {
    outline: 0;
    -webkit-appearance: none;
    box-shadow: none;
+   transition: all .4s ease;
 }
 button, a, a.btn {
    transition: all .4s ease;
@@ -95,9 +96,26 @@ button, a, a.btn {
 .caption {
    z-index: 1;
    position: absolute;
-   top: 38%;
+   top: 30%;
    width: 100%;
    max-width: 100%;
+}
+.caption h1 {
+   font-size: 4.5rem;
+   letter-spacing:0.3rem;
+   text-shadow: .1rem .1rem .8rem black;
+   padding-bottom: 1rem;
+}
+.caption h3 {
+   font-size: 2.5rem;
+   text-shadow: .1rem .1rem .5rem black;
+   padding-bottom: 2rem;
+}
+.caption .btn-lg {
+   border-width: medium;
+   padding: .8rem 1.5rem;
+   font-size: 1.1rem;
+
 }
 /*-- Bouncing Down Arrow --*/
 
