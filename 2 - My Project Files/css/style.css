@@ -182,7 +182,40 @@ h3.heading {
    padding-bottom: .4rem;
 }
 /*===== FIXED BACKGROUND IMG DARK =====*/
-
+.fixed {
+   position: relative;
+   width: 100%;
+   display: table;
+}
+.fixed-wrap {
+   clip: rect(0, auto, auto, 0);
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: -9999;
+}
+.fixed-dark {
+   background-image: url('../img/fixed/apple.jpg');
+   position: fixed;
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+   background-position: center center;
+   -webkit-transform: translateZ(0);
+   transform: translateZ(0);
+   will-change: transform;
+   display: table;
+   z-index: -1;
+   top: 0;
+   left: 0;
+}
+.dark {
+   background-color: rgba(0, 0, 0, 0.7);
+   padding: 7rem 0;
+   z-index: 1000;
+}
 /*--- iOS Fixed Background Image --*/
 
 
