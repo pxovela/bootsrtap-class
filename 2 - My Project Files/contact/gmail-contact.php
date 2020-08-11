@@ -72,8 +72,8 @@ $mail->IsSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->Port = "465"; // 8025, 587 and 25 can also be used. Use Port 465 for SSL.
                 
-                $mail->Username = "irakli.py@gmail.com";
-                $mail->Password = "f&7Z2@V6*ZLa";
+                $mail->Username = "";
+                $mail->Password = "";
 
                 $mail->From = $fromEmail;
                 $mail->FromName = $fromName;
