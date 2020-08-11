@@ -326,7 +326,24 @@ ul.social li a:hover {
 
 
 /*============= CLIENTS SECTION =============*/
-
+#clients-carousel {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+.clients img {
+   border-radius: 50%;
+   transition: transform .3s ease;
+}
+.clients img:hover {
+   transform: scale(.95);
+}
+blockquote .svg-inline--fa {
+   margin: 1rem;
+   color: #c49250;
+}
+.clients-hr {
+   border-top: .1rem solid #c49250;
+}
 
 /*============= CONTACT SECTION =============*/
 
